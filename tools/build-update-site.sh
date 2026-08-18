@@ -15,7 +15,8 @@ mkdir -p "$output"
 base="https://downloads.micron.ox.ac.uk/fiji_update/mirrors/sites-fiji/jars"
 
 fetch() {
-    local remote="$1" name="$2" expected="$3" target="$cache/$name"
+    local remote="$1" name="$2" expected="$3"
+    local target="$cache/$name"
     if [[ ! -f "$target" ]] || \
        [[ "$(sha256sum "$target" | awk '{print $1}')" != "$expected" ]]; then
         curl --fail --location --retry 5 --retry-all-errors \

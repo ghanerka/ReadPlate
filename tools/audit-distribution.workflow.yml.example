@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 30
     env:
       SITE_NAME: ReadPlate
-      SITE_URL: https://sites.imagej.net/ReadPlate/
+      SITE_URL: https://ghanerka.github.io/ReadPlate/
       FIJI_URL: https://downloads.imagej.net/fiji/latest/fiji-linux64.zip
     steps:
       - name: Check out source
@@ -51,8 +51,7 @@ jobs:
           expected = [
               '- name: "ReadPlate"',
               'id: "ReadPlate"',
-              'url: "https://sites.imagej.net/ReadPlate/"',
-              'Jos� Mar�a Delfino',
+              'Jos\u00e9 Mar\u00eda Delfino',
           ]
           for value in expected:
               assert value in text, f"canonical registry is missing {value!r}"
@@ -69,7 +68,7 @@ jobs:
           python3 - <<'PY'
           import json, pathlib, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 
-          site = "https://sites.imagej.net/ReadPlate/"
+          site = "https://ghanerka.github.io/ReadPlate/"
           audit = pathlib.Path(".audit")
           root = ET.parse(audit / "db.xml").getroot()
           current = []
@@ -127,7 +126,7 @@ jobs:
             2>&1 | tee .audit/fiji-refresh.log
           "$launcher" --headless --update list-update-sites ReadPlate \
             2>&1 | tee .audit/fiji-discovery.log
-          grep -F "https://sites.imagej.net/ReadPlate/" .audit/fiji-discovery.log
+          grep -F "ReadPlate" .audit/fiji-discovery.log
 
           "$launcher" --headless --update edit-update-site \
             ReadPlate "${SITE_URL}" \

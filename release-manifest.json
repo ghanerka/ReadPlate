@@ -3,7 +3,7 @@
   "project": "ReadPlate",
   "version": "3.0",
   "release_date": "2020-08-15",
-  "manifest_prepared": "2026-08-18T12:41:25Z",
+  "manifest_prepared": "2026-08-18T13:33:15Z",
   "artifacts": [
     {
       "path": "ReadPlate3.0.txt",
@@ -12,7 +12,7 @@
       "bytes": 18089,
       "sha256": "cebc7adec072ac5fae9bbf6a87d677bcfc59ca7e998ab1d7586ac034b45761d6",
       "included_in_source_release": true,
-      "fiji_update_site_payload_candidate": true
+      "included_in_published_fiji_payload": true
     },
     {
       "path": "index.html",
@@ -21,7 +21,7 @@
       "bytes": 51085,
       "sha256": "dbe08e5276d083db63498ce89e51169f0ec36265586bd05bf083b61b72766807",
       "included_in_source_release": true,
-      "fiji_update_site_payload_candidate": true
+      "included_in_published_fiji_payload": true
     },
     {
       "path": "plate.jpg",
@@ -30,7 +30,7 @@
       "bytes": 492341,
       "sha256": "d32206e3543ed109d9b01b840a943c9388ea189b1704ff1624a4e3c1c0a1291c",
       "included_in_source_release": true,
-      "fiji_update_site_payload_candidate": true
+      "included_in_published_fiji_payload": true
     },
     {
       "path": "imagej/ij.jar",
@@ -39,7 +39,69 @@
       "bytes": 2374762,
       "sha256": "c5f5f1dc71aa071d5e2fca70f3756d53cfe3a34dc2a681bdca01f4593681c675",
       "included_in_source_release": false,
-      "fiji_update_site_payload_candidate": false
+      "included_in_published_fiji_payload": false
     }
-  ]
+  ],
+  "distribution": {
+    "source_repository": "https://github.com/ghanerka/ReadPlate",
+    "update_site": "https://ghanerka.github.io/ReadPlate/",
+    "updater_database": {
+      "url": "https://ghanerka.github.io/ReadPlate/db.xml.gz",
+      "sha256": "4ffbad1b2e8822173ed2276061a0f2c0ee16d851c6ae8637240cd2e0a005348a",
+      "payload_timestamp": "20260818133016",
+      "current_payloads": [
+        {
+          "logical_path": "plugins/ReadPlate_3.0.ijm",
+          "remote_path": "plugins/ReadPlate_3.0.ijm-20260818133016",
+          "bytes": 18089,
+          "sha256": "cebc7adec072ac5fae9bbf6a87d677bcfc59ca7e998ab1d7586ac034b45761d6",
+          "updater_checksum": "8fc5c209609bb0a2cd47089abe70813e19c26597",
+          "author": "José María Delfino",
+          "description": "ReadPlate 3.0 measures intensity and absorbance from photographs of 6-, 12-, 24-, 48-, and 96-well plates.",
+          "links": [
+            "https://github.com/ghanerka/ReadPlate",
+            "https://doi.org/10.1002/bmb.21139"
+          ]
+        },
+        {
+          "logical_path": "plugins/ReadPlate/index.html",
+          "remote_path": "plugins/ReadPlate/index.html-20260818133016",
+          "bytes": 51085,
+          "sha256": "dbe08e5276d083db63498ce89e51169f0ec36265586bd05bf083b61b72766807",
+          "updater_checksum": "89a1541aa5409e70b915682e813fa4ce81ab9fe7",
+          "author": "José María Delfino",
+          "description": "Original ReadPlate 3.0 documentation.",
+          "links": [
+            "https://github.com/ghanerka/ReadPlate",
+            "https://doi.org/10.1002/bmb.21139"
+          ]
+        },
+        {
+          "logical_path": "plugins/ReadPlate/plate.jpg",
+          "remote_path": "plugins/ReadPlate/plate.jpg-20260818133016",
+          "bytes": 492341,
+          "sha256": "d32206e3543ed109d9b01b840a943c9388ea189b1704ff1624a4e3c1c0a1291c",
+          "updater_checksum": "e5ce43bd9a588bdd56b3adc4fdcdfbe768b09e88",
+          "author": "José María Delfino",
+          "description": "Original sample photograph of a 96-well plate.",
+          "links": [
+            "https://github.com/ghanerka/ReadPlate",
+            "https://doi.org/10.1002/bmb.21139"
+          ]
+        }
+      ]
+    },
+    "canonical_registry": {
+      "name": "ReadPlate",
+      "registered_url_as_of_audit": "https://sites.imagej.net/ReadPlate/",
+      "replacement_url_pull_request": "https://github.com/imagej/list-of-update-sites/pull/217",
+      "pull_request_state_as_of_audit": "open"
+    },
+    "verified": {
+      "utc": "2026-08-18T13:33:15Z",
+      "fiji_updater_install": "NEW to INSTALLED for all three payloads",
+      "imagej_1_53c_menu_command": "Plugins > ReadPlate 3.0",
+      "installed_payloads_match_original_sha256": true
+    }
+  }
 }

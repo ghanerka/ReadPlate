@@ -75,7 +75,7 @@ public class PrepareReadPlateSite {
         }
         file.updateSite = SITE_NAME;
         file.description = description;
-        file.addAuthor("Jos� Mar�a Delfino");
+        file.addAuthor("Jos\u00e9 Mar\u00eda Delfino");
         file.addLink("https://github.com/ghanerka/ReadPlate");
         file.addLink("https://doi.org/10.1002/bmb.21139");
         file.metadataChanged = true;

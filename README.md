@@ -4,15 +4,19 @@ ReadPlate is an ImageJ macro by José María Delfino for measuring light intensi
 
 ## Install with Fiji
 
-ReadPlate is registered in ImageJ's canonical list of update sites as **ReadPlate**:
+ReadPlate is registered in ImageJ's canonical update-site list as **ReadPlate**, but the registry's original `sites.imagej.net` endpoint was not reachable during this release audit. A working, updater-compatible site is now published at:
 
-1. Start a current [Fiji](https://fiji.sc/) installation.
-2. Choose **Help › Update…**.
-3. Click **Manage update sites**.
-4. Enable **ReadPlate**, click **Apply and Close**, and apply the offered changes.
-5. Restart Fiji.
+<https://ghanerka.github.io/ReadPlate/>
 
-Update-site URL: <https://sites.imagej.net/ReadPlate/>
+Until [the canonical URL update](https://github.com/imagej/list-of-update-sites/pull/217) is merged:
+
+1. Start a current [Fiji](https://fiji.sc/) installation and choose **Help › Update…**.
+2. Click **Manage update sites**, then **Add Unlisted Site**.
+3. Use a nickname such as `ReadPlate-GitHub` and URL `https://ghanerka.github.io/ReadPlate/`.
+4. Enable the site, click **Apply and Close**, apply changes, and restart Fiji.
+5. Run **Plugins › ReadPlate 3.0**.
+
+The updater installs the macro, original HTML documentation, and original JPEG sample image. After registry PR #217 is merged, users can simply enable the built-in **ReadPlate** entry instead of adding the URL.
 
 The updater belongs to ImageJ2/Fiji; the original ImageJ1 application by itself does not support update sites. For a manual ImageJ1 installation, open ImageJ and choose **Plugins › Install…**, then select `ReadPlate3.0.txt`.
 
@@ -63,4 +67,4 @@ The supplied release bundle contains no software license declaration. See [`LICE
 
 ## Distribution records
 
-ImageJ's central update-site registry has contained a ReadPlate entry since 2020. The registry source is [`imagej/list-of-update-sites`](https://github.com/imagej/list-of-update-sites), and the addition was merged as [PR #54](https://github.com/imagej/list-of-update-sites/pull/54). See [`DISTRIBUTION.md`](DISTRIBUTION.md) for the verified release and installation state.
+ImageJ's central update-site registry has contained a ReadPlate entry since 2020. The original entry was merged as [PR #54](https://github.com/imagej/list-of-update-sites/pull/54); [PR #217](https://github.com/imagej/list-of-update-sites/pull/217) is open to point that existing entry to the verified working site. See [`DISTRIBUTION.md`](DISTRIBUTION.md) for exact discovery, hosting, and clean-install verification states.
