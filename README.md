@@ -67,4 +67,4 @@ The supplied release bundle contains no software license declaration. See [`LICE
 
 ## Distribution records
 
-ImageJ's central update-site registry has contained a ReadPlate entry since 2020. The original entry was merged as [PR #54](https://github.com/imagej/list-of-update-sites/pull/54); [PR #217](https://github.com/imagej/list-of-update-sites/pull/217) is open to point that existing entry to the verified working site. See [`DISTRIBUTION.md`](DISTRIBUTION.md) for exact discovery, hosting, and clean-install verification states.
+ImageJ's central update-site registry has contained a ReadPlate entry since 2020. The original entry was merged as [PR #54](https://github.com/imagej/list-of-update-sites/pull/54); [registry PR #217](https://github.com/imagej/list-of-update-sites/pull/217) points that entry to the verified working site, and [wiki PR #433](https://github.com/imagej/imagej.github.io/pull/433) adds the missing ImageJ plugin page. Both upstream PRs are open. See [`DISTRIBUTION.md`](DISTRIBUTION.md) for exact discovery, hosting, and clean-install verification states.

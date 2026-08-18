@@ -22,7 +22,7 @@ The entry was added on 2020-09-03 in commit [`ee4e333`](https://github.com/image
 
 That proves **canonical discovery**, so creating a duplicate registry entry would be incorrect. It does not by itself prove installability. During the 2026-08-18 audit, direct HTTP and HTTPS requests to the registered host timed out, and independent server-side fetch services returned HTTP 522. Its `db.xml.gz` and payload could therefore not be verified or installed.
 
-A replacement static update site is now live at <https://ghanerka.github.io/ReadPlate/>. [`imagej/list-of-update-sites#217`](https://github.com/imagej/list-of-update-sites/pull/217) updates the existing registry record to that URL; the PR is open and awaits upstream workflow approval/review.
+A replacement static update site is now live at <https://ghanerka.github.io/ReadPlate/>. [`imagej/list-of-update-sites#217`](https://github.com/imagej/list-of-update-sites/pull/217) updates the existing registry record to that URL. [`imagej/imagej.github.io#433`](https://github.com/imagej/imagej.github.io/pull/433) adds a searchable ImageJ wiki plugin page because none existed and the legacy NIH documentation URLs now return 404. Both PRs are open and await upstream workflow approval/review.
 
 ## Release metadata recovered from the bundle
 
@@ -79,6 +79,8 @@ An authorized uploader can instead repopulate the original hosted `ReadPlate` si
 | File integrity | Installed SHA-256 values equal `release-manifest.json`: macro `cebc7a…`, HTML `dbe08e…`, sample JPEG `d32206…` |
 | ImageJ menu discovery | ImageJ 1.53c registered `Plugins › ReadPlate 3.0` as `ij.plugin.Macro_Runner("ReadPlate_3.0.ijm")` |
 | Canonical discovery | Existing ReadPlate registry record verified; URL-change PR [#217](https://github.com/imagej/list-of-update-sites/pull/217) is open, not merged |
+| Wiki/search discovery | Plugin-page PR [#433](https://github.com/imagej/imagej.github.io/pull/433) is open, not merged |
+| Versioned source release | Public release [`v3.0.0`](https://github.com/ghanerka/ReadPlate/releases/tag/v3.0.0), with original artifacts, `.ijm` copy, ZIP, checksums, and manifest |
 | Original hosted site | Not verifiable from this environment because `sites.imagej.net` did not respond |
 
 The reusable workflow definition is stored as [`tools/audit-distribution.workflow.yml.example`](tools/audit-distribution.workflow.yml.example). It is an example rather than an active workflow because the available publication credential had repository scope but not GitHub's separate `workflow` scope.
