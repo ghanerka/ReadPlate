@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use ReadPlate, please cite the software and the related publication below."
+title: "ReadPlate"
+type: software
+authors:
+  - family-names: "Delfino"
+    given-names: "Jos� Mar�a"
+    email: "delfino@qb.ffyb.uba.ar"
+version: "3.0"
+date-released: 2020-08-15
+repository-code: "https://github.com/ghanerka/ReadPlate"
+url: "https://sites.imagej.net/ReadPlate/"
+keywords:
+  - "ImageJ"
+  - "Fiji"
+  - "plate reader"
+  - "microplate"
+  - "microtiter plate photometry"
+  - "absorbance"
+  - "digital camera"
+preferred-citation:
+  type: article
+  title: "A Metabolic Control Analysis Approach to Introduce the Study of Systems in Biochemistry: the Glycolytic Pathway in the Red Blood Cell"
+  authors:
+    - family-names: "Angelani"
+      given-names: "Carla R."
+    - family-names: "Carabias"
+      given-names: "Pablo"
+    - family-names: "Cruz"
+      given-names: "Karen M."
+    - family-names: "Delfino"
+      given-names: "Jos� M."
+    - family-names: "de Sautu"
+      given-names: "Marilina"
+    - family-names: "Espelt"
+      given-names: "Mar�a V."
+    - family-names: "Ferreira-Gomes"
+      given-names: "Mariela S."
+    - family-names: "Gomez"
+      given-names: "Gabriela E."
+    - family-names: "Mangialavori"
+      given-names: "Irene C."
+    - family-names: "Manzi"
+      given-names: "Malena"
+    - family-names: "Pignataro"
+      given-names: "Mar�a F."
+    - family-names: "Saffioti"
+      given-names: "Nicol�s A."
+    - family-names: "Salvatierra Frechou"
+      given-names: "Damiana M."
+    - family-names: "Santos"
+      given-names: "Javier"
+    - family-names: "Schwarzbaum"
+      given-names: "Pablo J."
+  journal: "Biochemistry and Molecular Biology Education"
+  volume: 46
+  issue: 5
+  start: 502
+  end: 515
+  year: 2018
+  doi: "10.1002/bmb.21139"

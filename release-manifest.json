@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "project": "ReadPlate",
+  "version": "3.0",
+  "release_date": "2020-08-15",
+  "manifest_prepared": "2026-08-18T12:41:25Z",
+  "artifacts": [
+    {
+      "path": "ReadPlate3.0.txt",
+      "role": "macro-source",
+      "media_type": "text/plain",
+      "bytes": 18089,
+      "sha256": "cebc7adec072ac5fae9bbf6a87d677bcfc59ca7e998ab1d7586ac034b45761d6",
+      "included_in_source_release": true,
+      "fiji_update_site_payload_candidate": true
+    },
+    {
+      "path": "index.html",
+      "role": "documentation",
+      "media_type": "text/html",
+      "bytes": 51085,
+      "sha256": "dbe08e5276d083db63498ce89e51169f0ec36265586bd05bf083b61b72766807",
+      "included_in_source_release": true,
+      "fiji_update_site_payload_candidate": true
+    },
+    {
+      "path": "plate.jpg",
+      "role": "sample-image",
+      "media_type": "image/jpeg",
+      "bytes": 492341,
+      "sha256": "d32206e3543ed109d9b01b840a943c9388ea189b1704ff1624a4e3c1c0a1291c",
+      "included_in_source_release": true,
+      "fiji_update_site_payload_candidate": true
+    },
+    {
+      "path": "imagej/ij.jar",
+      "role": "bundled-runtime",
+      "media_type": "application/java-archive",
+      "bytes": 2374762,
+      "sha256": "c5f5f1dc71aa071d5e2fca70f3756d53cfe3a34dc2a681bdca01f4593681c675",
+      "included_in_source_release": false,
+      "fiji_update_site_payload_candidate": false
+    }
+  ]
+}

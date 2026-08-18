@@ -1,0 +1,13 @@
+# The bundled legacy ImageJ runtime is retained locally but is not part of the
+# ReadPlate source release or Fiji update-site payload.
+/imagej/
+/launch_readplate.sh
+
+# Fiji/update-site working trees and generated audit output.
+/Fiji.app/
+/.audit/
+/update-site/
+
+# OS/editor files.
+.DS_Store
+*~

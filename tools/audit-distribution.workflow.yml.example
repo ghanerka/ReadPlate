@@ -1,0 +1,186 @@
+name: Audit Fiji distribution
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 15 * *"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SITE_NAME: ReadPlate
+      SITE_URL: https://sites.imagej.net/ReadPlate/
+      FIJI_URL: https://downloads.imagej.net/fiji/latest/fiji-linux64.zip
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Verify preserved release files
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, pathlib
+          manifest = json.loads(pathlib.Path("release-manifest.json").read_text())
+          for item in manifest["artifacts"]:
+              path = pathlib.Path(item["path"])
+              if not item["included_in_source_release"]:
+                  continue
+              assert path.is_file(), f"missing source artifact: {path}"
+              data = path.read_bytes()
+              assert len(data) == item["bytes"], f"size mismatch: {path}"
+              actual = hashlib.sha256(data).hexdigest()
+              assert actual == item["sha256"], f"SHA-256 mismatch: {path}"
+              print(f"OK source {path} {len(data)} {actual}")
+          PY
+
+      - name: Verify canonical discovery record
+        run: |
+          set -euo pipefail
+          mkdir -p .audit
+          curl --fail --location --retry 5 --retry-all-errors \
+            https://raw.githubusercontent.com/imagej/list-of-update-sites/main/sites.yml \
+            -o .audit/sites.yml
+          python3 - <<'PY'
+          import pathlib
+          text = pathlib.Path(".audit/sites.yml").read_text()
+          expected = [
+              '- name: "ReadPlate"',
+              'id: "ReadPlate"',
+              'url: "https://sites.imagej.net/ReadPlate/"',
+              'Jos� Mar�a Delfino',
+          ]
+          for value in expected:
+              assert value in text, f"canonical registry is missing {value!r}"
+          print("OK canonical registry contains the ReadPlate discovery record")
+          PY
+
+      - name: Validate hosted update site and payloads
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-all-errors \
+            "${SITE_URL}db.xml.gz" -o .audit/db.xml.gz
+          gzip --test .audit/db.xml.gz
+          gzip --decompress --stdout .audit/db.xml.gz > .audit/db.xml
+          python3 - <<'PY'
+          import json, pathlib, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+
+          site = "https://sites.imagej.net/ReadPlate/"
+          audit = pathlib.Path(".audit")
+          root = ET.parse(audit / "db.xml").getroot()
+          current = []
+          payload_dir = audit / "remote-payload"
+          payload_dir.mkdir(exist_ok=True)
+          for plugin in root.findall("plugin"):
+              version = plugin.find("version")
+              if version is None:
+                  continue
+              logical = plugin.attrib["filename"]
+              timestamp = version.attrib["timestamp"]
+              remote_name = f"{logical}-{timestamp}"
+              url = urllib.parse.urljoin(site, urllib.parse.quote(remote_name, safe="/"))
+              target = payload_dir / remote_name
+              target.parent.mkdir(parents=True, exist_ok=True)
+              print(f"GET {url}")
+              with urllib.request.urlopen(url, timeout=90) as response:
+                  data = response.read()
+                  status = response.status
+              expected_size = int(version.attrib["filesize"])
+              assert status == 200
+              assert len(data) == expected_size, (logical, len(data), expected_size)
+              target.write_bytes(data)
+              current.append({
+                  "logical_path": logical,
+                  "timestamp": timestamp,
+                  "filesize": expected_size,
+                  "updater_checksum": version.attrib["checksum"],
+                  "description": (version.findtext("description") or "").strip(),
+                  "authors": [x.text for x in version.findall("author")],
+                  "links": [x.text for x in version.findall("link")],
+                  "remote_url": url,
+              })
+          assert current, "hosted updater database has no current payloads"
+          (audit / "hosted-payload.json").write_text(
+              json.dumps(current, indent=2, ensure_ascii=False) + "\n"
+          )
+          print(json.dumps(current, indent=2, ensure_ascii=False))
+          PY
+          sha256sum .audit/db.xml.gz .audit/remote-payload/**/* 2>/dev/null | \
+            tee .audit/remote-sha256.txt || true
+
+      - name: Install through a clean Fiji updater
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-all-errors \
+            "${FIJI_URL}" -o .audit/fiji-linux64.zip
+          unzip -q .audit/fiji-linux64.zip
+          launcher=./Fiji.app/ImageJ-linux64
+          chmod +x "$launcher"
+
+          # Refresh Fiji's canonical list, show that ReadPlate is discoverable,
+          # activate its existing record, and apply updates.
+          "$launcher" --headless --update refresh-update-sites --updateall \
+            2>&1 | tee .audit/fiji-refresh.log
+          "$launcher" --headless --update list-update-sites ReadPlate \
+            2>&1 | tee .audit/fiji-discovery.log
+          grep -F "https://sites.imagej.net/ReadPlate/" .audit/fiji-discovery.log
+
+          "$launcher" --headless --update edit-update-site \
+            ReadPlate "${SITE_URL}" \
+            2>&1 | tee .audit/fiji-enable.log
+          "$launcher" --headless --update list-from-site ReadPlate \
+            2>&1 | tee .audit/fiji-site-files-before.log
+          "$launcher" --headless --update update \
+            2>&1 | tee .audit/fiji-install.log
+
+          # Starting the launcher once more applies any restart-staged files.
+          "$launcher" --headless --update list-from-site ReadPlate \
+            2>&1 | tee .audit/fiji-site-files-after.log
+
+          python3 - <<'PY'
+          import json, pathlib
+          records = json.loads(pathlib.Path(".audit/hosted-payload.json").read_text())
+          missing = []
+          for record in records:
+              path = pathlib.Path("Fiji.app") / record["logical_path"]
+              if not path.is_file():
+                  missing.append(str(path))
+              else:
+                  print(f"OK installed {path} ({path.stat().st_size} bytes)")
+          assert not missing, "missing installed payloads: " + ", ".join(missing)
+          PY
+          find Fiji.app -type f -iname '*readplate*' -print -exec sha256sum {} \; \
+            | tee .audit/installed-readplate.txt
+
+      - name: Write audit summary
+        if: always()
+        run: |
+          {
+            echo "# ReadPlate distribution audit"
+            echo
+            echo "Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            echo "UTC: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo
+            echo "## Discovery"
+            cat .audit/fiji-discovery.log 2>/dev/null || true
+            echo
+            echo "## Hosted payload metadata"
+            cat .audit/hosted-payload.json 2>/dev/null || true
+            echo
+            echo "## Installed files"
+            cat .audit/installed-readplate.txt 2>/dev/null || true
+          } > .audit/SUMMARY.md
+          cat .audit/SUMMARY.md
+
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: readplate-distribution-audit
+          path: .audit/
+          if-no-files-found: warn
+          retention-days: 30
