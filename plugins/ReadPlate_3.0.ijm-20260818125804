@@ -1,0 +1,632 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// Plugin "ReadPlate 3.0"
+//
+// This macro measures absorbance values from an image of a multi-well plate 
+//
+// ReadPlate 3.0 version incorporates the capability of reading multi-well plates of 6 (3x2), 
+// 12 (4x3), 24 (6x4), 48 (8x6) and 96 (12x8) wells. An new user-friendly interface facilitates 
+// image analysis. This version allows new user-defined features to optimize blank correction.  
+// Multiple readings of the same plate has also considerably been facilitated, appending
+// the full parameter file to the results and log file, 08-15-2020;
+// ReadPlate 2.1 version incorporates an improved blank correction algorithm, 02-16-2018; 
+// ReadPlate 2.0 version incorporates blank correction, 04-15-2016; 
+// Original ReadPlate 1.0 version, 12-16-2015;
+//
+// ReadPlate 3.0 was tested with ImageJ 1.53c, Wayne Rasband, NIH (26 June 2020), and
+// Java 1.8.0_101 (64-bit) in a MacBook Pro (Retina, 13-inch, Early 2013), 
+// running OS X El Capitan, version 10.11.6
+//
+// Jose Maria Delfino, PhD
+// Department of Biological Chemistry and Institute of Biochemistry and Biophysics (IQUIFIB)
+// School of Pharmacy & Biochemistry
+// University of Buenos Aires and CONICET
+// Junin 956, C1113AAD Buenos Aires, Argentina
+// E-mail: delfino@qb.ffyb.uba.ar
+// Phone: 54 11 4962 5506, extension 116
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+//				
+// INSTALLATION:
+// ImageJ is a high-quality public domain software very useful for image processing.
+// Download the software from the imagej.nih.gov site (contact person Wayne S Rasband) 
+// You should have ImageJ installed in your machine in the first place.
+// This plugin is a script written in ImageJ macro language (.ijm file).
+// After opening ImageJ, install this plugin by doing Plugins > Install and choosing 
+// ReadPlate from the appropriate directory.
+// The plugin ReadPlate should now appear listed under the Plugins menu, and is ready to 
+// be launched by clicking Plugins > ReadPlate. 
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Example image: http://imagej.nih.gov/ij/macros/images/plate.jpg
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Relevant literature reference: 
+//
+// Carla R. Angelani, Pablo Carabias, Karen M. Cruz, Jose M. Delfino, Marilina de Sautu, 
+// Maria V. Espelt, Mariela S. Ferreira-Gomes, Gabriela E. Gomez, Irene C. Mangialavori, 
+// Malena Manzi, Maria F. Pignataro, Nicolas A. Saffioti, Damiana M. Salvatierra Frechou, 
+// Javier Santos, Pablo J. Schwarzbaum
+// "A Metabolic Control Analysis Approach to Introduce the Study of Systems in Biochemistry: 
+// the Glycolytic Pathway in the Red Blood Cell" 
+// Biochemistry and Molecular Biology Education, Volume 46, Issue5, September/October 2018, 
+// Pages 502-515   https://doi.org/10.1002/bmb.21139
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+//Clearing table with results and removing overlay
+
+run("Clear Results");
+
+run("Remove Overlay");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+message =
+
+"STEP-BY-STEP INSTRUCTIONS FOR USE:					\n"
++"Before starting, please set the following parameters for measurements: 			\n"  
++"	(Analyze > Set Measurements). The following should be selected:		\n" 
++"	Area / Standard Deviation / Min & Max Gray Value/ Mean Gray Value/ Modal Gray Value/	\n"  
++"	Add to Overlay (very important!) / Redirect to None / Decimal Places (0-9): 3		\n" 
++"							\n"
++"1.- Take a color photograph of the plate centered at the middle point (for details see the plugin 	\n"
++"	presentation at	 https://imagej.nih.gov/ij/plugins/readplate/index.html		\n"
++"	and supplementary material of the relevant literature reference cited therein).	\n"
++"	Make sure plate borders are aligned parallel to the edges of the photograph.	\n"
++"	Export image as a .jpg file.					\n"
++"2.- Open the .jpg image from within the ImageJ software installed in your computer.		\n"
++"3.- Run the plugin ReadPlate (by launching Plugins > ReadPlate).			\n"
++"	Select the correct plate format: 6(3x2), 12(4x3), 24(6x4), 48(8x6) or 96(12x8) wells.	\n"
++"	Make a center-to-center rectangular selection of wells (upper-left and lower-right corners).\n"
++"	Select the desired color channel (Red, Green, Blue or Gray) for measurements.	\n"
++"	Choose the appropriate parameters for the grid of circles to be measured.		\n" 
++"	Each circle needs not be too large, because enough color information is coded in pixels 	\n"  
++"	covering a relatively small area. The final grid should show main circles centered on each	\n"     
++"	well surrounded by ancillary circles located outside. The latter are used by the blank 	\n" 
++"	correction algorithm to compensate for any difference in local light intensity.	\n"
++"	Check the fit of the final grid onto the plate image. If it looks right, then proceed to collect	\n"
++"	measurements.  A table of results will appear next. This includes number, alphanumeric	\n"
++"	label and area of each well, light intensity measurements (Mean, StdDev, Mode, Min, Max),	\n"
++"	and absorbance values. Corrected absorbance values (Acorr) result from applying the blank \n"
++"	suppression algorithm.					\n"
++"	By default, results are formatted as .csv files, readily interpretable by Excel.		\n" 
++"							\n"
++"	ReadPlate 3.0 (August 2020)					\n"
++"	Jose Maria Delfino, PhD					\n"
++"	Department of Biological Chemistry and Institute of Biochemistry and Biophysics (IQUIFIB),	\n"
++"	School of Pharmacy and Biochemistry, University of Buenos Aires and CONICET,	\n"
++"	Junin 956, C1113AAD Buenos Aires, Argentina.			\n"
++"	delfino@qb.ffyb.uba.ar	 				\n"
++"	Please see the plugin presentation and header for the full relevant literature reference	\n" 
++"	Your feedback will be greatly appreciated!				\n"
+					
+showMessage ("ReadPlate", message);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Opening a color photograph of the multi-well plate
+
+requires("1.43h");	// required for the Array functions used below
+  if (bitDepth!=24)
+     exit("This macro requires an RGB image");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Choice of plate format
+
+plateformat=newArray("96", "48", "24", "12", "6");
+
+Dialog.create("Plate format");
+
+Dialog.addChoice("Number of wells:", plateformat, "96");
+
+Dialog.show();
+
+plateformat = Dialog.getChoice();
+
+if (plateformat== "6") {
+
+	 ncol=3; nrow=2;
+}
+
+else if (plateformat== "12") { 
+
+      	 ncol=4; nrow=3;
+}
+
+else if (plateformat== "24") {
+
+        	 ncol=6; nrow=4;
+}
+
+else if (plateformat== "48") {
+
+        	 ncol=8; nrow=6;
+}
+
+else {ncol=12; nrow=8;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Waiting to make a rectangular selection on the plate
+
+title = "Rectangular selection";
+
+msg = 
+"Make a center-to-center rectangular selection on the plate \n"
++"(wells in the upper-left and lower-right corners) \n"
++"Once you are done, press OK \n";
+
+waitForUser(title, msg);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//After making a rectangular selection on the plate
+
+getSelectionCoordinates(x, y);
+	for (i=0; i<x.length; i++){
+
+if (i==0) {
+	 xo=x[i]; yo=y[i];
+}
+
+if (i==2) {
+	 xf=x[i]; yf=y[i];
+}
+
+//         	print(i+" "+x[i]+" "+y[i]);
+
+}
+
+//print(xo);
+//print(yo);
+//print(xf);
+//print(yf);
+//print("-----");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Setting the default grid parameter values
+
+nc=ncol; nr=nrow; 
+
+mcsize=15; f=1; g=1/sqrt(3);
+// f=1 and g=1/sqrt(3) correspond to values set fixed in ReadPlate2.1 
+
+reading=0;
+
+do {
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Choice of the color channel
+
+color=newArray("Green", "Blue", "Red", "Gray");
+
+Dialog.create("Measurements");
+
+Dialog.addChoice("Channel:", color);
+
+Dialog.show();
+
+color = Dialog.getChoice();
+
+if (color== "Red") 
+
+	setRGBWeights(1, 0, 0);
+
+     else if (color== "Green") 
+
+      	setRGBWeights(0, 1, 0);
+
+     else if (color== "Blue")
+
+        setRGBWeights(0, 0, 1);
+
+     else setRGBWeights(1/3, 1/3, 1/3);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Refining the grid parameter values
+
+   do {
+
+
+run("Remove Overlay");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Entering the grid parameter values
+
+Dialog.create("Parameters");
+
+mgp="Main grid parameters";
+
+Dialog.addMessage(mgp);
+ 
+Dialog.addNumber("Number of columns to read:", nc);
+
+Dialog.addNumber("Number of rows to read:", nr);
+
+Dialog.addNumber("Center of the upper-left well (X origin, in pixels, left equals zero):", xo);
+
+Dialog.addNumber("Center of the upper-left well (Y origin, in pixels, up equals zero):", yo);
+
+Dialog.addNumber("Center of the lower-right well (X end, in pixels):", xf);
+
+Dialog.addNumber("Center of the lower-right well (Y end, in pixels):", yf);
+
+Dialog.addNumber("Diameter of main circle (in pixels):", mcsize);
+
+bac="Blank ancillary circles";
+
+Dialog.addMessage(bac);
+
+nanc=newArray("0","1", "2", "3", "4");
+
+Dialog.addChoice("Number of ancillary circles considered for blank:", nanc, "3");
+//number of ancillary circles (nanc) considered for blank measurement
+
+Dialog.addNumber("Proximity factor (range 0.7-1): ", f);
+
+//f scales the distance between the ancillary circles and the main central circle.
+//Please note that for all plate footprints (6 to 96), the diameter of wells is around 0.94-0.95 
+//the vertical or horizontal distance between the centres of contiguous wells  
+//Care should be taken to avoid intersecting the rim of the well 
+
+Dialog.addNumber("Size factor (range 0.5-1): ", g);
+
+//g scales the diameter of the ancillary circles relative to that of the main central circle.
+//To have a comparable number of pixels (same area) read in the main and ancillary circles,
+//the choice of g value should be close to 1/sqrt(nanc). Therefore, for
+//4, 3, 2 and 1 ancillary circles, g should be 0.5, ~0.577, ~0.71 and 1, respectively 
+
+Dialog.show();
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Checking the grid parameter values
+
+nc=Dialog.getNumber();
+
+if (nc!=round(nc))
+	exit ("The number of columns should be an integer value");
+if (nc < 1)
+	exit ("The number of columns should be at least one");
+if (nc > ncol)
+	exit ("The number of columns is too high");
+
+nr=Dialog.getNumber();
+
+if (nr!=round(nr))
+	exit ("The number of rows should be an integer value");
+if (nr < 1)
+	exit ("The number of rows should be at least one");
+if (nr > nrow)
+	exit ("The number of rows is too high");
+
+xo=Dialog.getNumber();
+
+if (xo!=round(xo))
+	exit ("The X origin should be an integer value");
+if (xo < 0)
+	exit ("The X origin should be positive");
+
+yo=Dialog.getNumber();
+
+if (yo!=round(yo))
+	exit ("The Y origin should be an integer value");
+if (yo < 0)
+	exit ("The Y origin should be positive");
+
+xf=Dialog.getNumber();
+
+if (xf!=round(xf))
+	exit ("The X end should be an integer value");
+if (xf < xo)
+	exit ("The X end should be higher than the X origin");
+
+yf=Dialog.getNumber();
+
+if (yf!=round(yf))
+	exit ("The Y end should be an integer value");
+if (yf < yo)
+	exit ("The Y end should be higher than the Y origin");
+
+mcsize=Dialog.getNumber();
+
+if (mcsize!=round(mcsize))
+	exit ("The circle diameter should be an integer value");
+if (mcsize < 1)
+	exit ("The circle diameter should be at least one pixel");
+
+f=Dialog.getNumber();
+
+if (f > 1 || f < 0.7)
+	exit ("The proximity factor should lie within the range 0.7-1");
+
+g=Dialog.getNumber();
+
+if (g > 1 || g < 0.5)
+	exit ("The size factor should lie within the range 0.5-1");
+
+nanc = Dialog.getChoice();
+num=parseInt(nanc);
+
+/////////////////////////////////////////////////////////////////////////////////////// 
+//Calculating the x and y distance between adjoining wells 
+
+csepx=(xf - xo)/(ncol -1); 
+
+csepy=(yf - yo)/(nrow -1);
+
+/////////////////////////////////////////////////////////////////////////////////////// 
+//Building the grid
+
+x=xo-mcsize/2;
+y=yo-mcsize/2;
+
+//f scales the distance between the main central circle and the ancillary circles 
+
+a=0.5*f;
+
+//g scales the size (diameter) of the ancillary circles relative to that of the main central circle 
+
+acsize=mcsize*g;
+
+for (i=0; i<nr; i++) {
+ 
+	for (j=0; j<nc; j++) {
+
+makeOval(x+(j-a)*csepx, y+(i-a)*csepy, acsize, acsize);
+run("Measure");
+
+makeOval(x+(j-a)*csepx, y+(i+a)*csepy, acsize, acsize);
+run("Measure");
+
+makeOval(x+(j+a)*csepx, y+(i-a)*csepy, acsize, acsize);
+run("Measure");
+
+makeOval(x+(j+a)*csepx, y+(i+a)*csepy, acsize, acsize);
+run("Measure");
+
+makeOval(x+j*csepx, y+i*csepy, mcsize, mcsize);
+run("Measure");
+
+	} 
+ }  
+
+Overlay.drawLabels(false);
+
+//run("Clear Results");
+
+if (isOpen("Results")) {
+
+         selectWindow("Results"); 
+ 
+        run("Close" );
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Checking the grid
+
+grid=newArray("Yes", "No");
+
+Dialog.create("Grid check-up");
+
+Dialog.addChoice("Does the grid fit the position of each well?", grid);
+ 
+Dialog.show();
+
+grid = Dialog.getChoice();
+
+   } while (grid== "No");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Doing measurements on the chosen grid
+
+for (i=0; i<nr; i++) {
+
+	row=substring("ABCDEFGH",i,i+1);
+	
+	for (j=0; j<nc; j++) {
+
+makeOval(x+(j-a)*csepx, y+(i-a)*csepy, acsize, acsize);
+getStatistics (area, mean);
+b1=mean;
+//print (area);
+//print (b1);
+
+makeOval(x+(j-a)*csepx, y+(i+a)*csepy, acsize, acsize);
+getStatistics (area, mean);
+b2=mean;
+//print (area);
+//print (b2);
+
+makeOval(x+(j+a)*csepx, y+(i-a)*csepy, acsize, acsize);
+getStatistics (area, mean);
+b3=mean;
+//print (area);
+//print (b3);
+
+makeOval(x+(j+a)*csepx, y+(i+a)*csepy, acsize, acsize);
+getStatistics (area, mean);
+b4=mean;
+//print (area);
+//print (b4);
+//print ("");
+
+makeOval(x+j*csepx, y+i*csepy, mcsize, mcsize);
+getStatistics (area, mean);
+intensity=mean;
+//print (intensity);
+//print (area);
+//print ("");
+
+//Blank correction algorithm
+//Measures the intensity of all 4 ancillary circles. Sorts these values top-down. 
+//Calculates the mean value of the upper num=1, 2, 3, or 4 (all) circles.
+//If no ancillary circle is chosen (num=0), the mean is set at its maximum value (255).
+//In this fashion, artifacts causing abnormally lower intensity readings due to 
+//obstruction elements present by the design of the plastic plate can be circumvented.
+
+ba = newArray(b1, b2, b3, b4);
+//Array.print (ba);
+bas = Array.sort(ba);
+//Array.print (bas);
+basi = Array.invert(bas);	//requires 1.43h
+//Array.print (basi);
+
+//print("");
+
+for (k=0; k<5; k++){
+if (num==k)		{
+ba = Array.trim(basi, k); 
+//Array.print (ba);
+Array.getStatistics (ba, min, max, mean, std);
+if (isNaN(mean)==1) 		{
+mean=255;
+			}
+bav=mean;
+//print (bav);
+
+		}
+
+	}
+
+
+ 	run("Measure");
+	
+ 	setResult("Row", nResults-1, row);
+
+ 	setResult("Column", nResults-1, j+1);
+
+ abuncorr=-(log(intensity/255)/log(10));
+ 	setResult("Auncorr", nResults-1, abuncorr);
+
+ ablank=-(log(bav/255)/log(10));
+ 	setResult("Ablank", nResults-1, ablank);
+
+ abcorr=abuncorr-ablank;	
+ 	setResult("Acorr", nResults-1, abcorr);
+
+ updateResults();
+
+ 	} 
+  }  
+
+updateResults();
+
+reading=reading + 1;
+
+Overlay.drawLabels(false);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Summary of parameter values: Output appended to the Log file & to the Results table  
+
+nwells=nr*nc;
+
+s0="Image file "; s1= "Reading "; s2="Plate format "; s3="Number of wells read "; s4=" wells ";
+
+s5="Color channel "; s6="Circle diameter "; s7=" pixels"; s8="Upper left well (x y) ("; s9=" (";
+
+s10=" "; s11=")"; s12="Lower right well (x y) ("; s13="---"; s14=" rows by "; s15=" columns)";
+
+s16="Proximity factor "; s17="Size factor "; s18="Number of ancillary circles "; 
+
+title = getTitle();
+
+print(s0+title);
+
+print(s1+reading);
+
+print(s2+plateformat+s4);
+
+print(s3+nwells+s9+nr+s14+nc+s15);
+
+print(s5+color);
+
+print(s6+mcsize+s7);
+
+print(s8+xo+s10+yo+s11);
+
+print(s12+xf+s10+yf+s11);
+
+print(s16+f);
+
+print(s17+g);
+
+print(s18+num);
+
+print(s13);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+print("[Results]", s0+title);
+
+print("[Results]", s1+reading);
+
+print("[Results]", s2+plateformat+s4);
+
+print("[Results]", s3+nwells+s9+nr+s14+nc+s15);
+
+print("[Results]", s5+color);
+
+print("[Results]", s6+mcsize+s7);
+
+print("[Results]", s8+xo+s10+yo+s11);
+
+print("[Results]", s12+xf+s10+yf+s11);
+
+print("[Results]", s16+f);
+
+print("[Results]", s17+g);
+
+print("[Results]", s18+num);
+
+print("[Results]", s13);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Checking Results
+
+title2 = "Checking results";
+
+msg2 = 
+"Please inspect table of results";
+
+waitForUser(title2, msg2);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Saving Results
+
+sns=newArray("Yes", "No");
+
+Dialog.create("Save results");
+
+Dialog.addChoice("Save results?", sns);
+ 
+Dialog.show();
+
+sns = Dialog.getChoice();
+
+if (sns== "Yes") {
+
+saveAs("measurements");
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//Repeat analysis
+
+newmeasure=newArray("Yes", "No");
+
+Dialog.create("New measurement");
+
+Dialog.addChoice("Will you perform a new measurement?", newmeasure);
+ 
+Dialog.show();
+
+newmeasure = Dialog.getChoice();
+
+} while (newmeasure== "Yes");
+    
+exit ("End of ReadPlate analysis");
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Jose Maria Delfino   delfino@qb.ffyb.uba.ar   August 15, 2020
+//////////////////////////////////////////////////////////////////////////////////////////
+
+

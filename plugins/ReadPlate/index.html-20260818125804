@@ -1,0 +1,991 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:mv="http://macVmlSchemaUri" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content="">
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="ReadPlate3.0_files/filelist.xml">
+<link rel=Edit-Time-Data href="ReadPlate3.0_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Jose Maria Delfino</o:Author>
+  <o:LastAuthor>Jose Maria Delfino</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>78</o:TotalTime>
+  <o:Created>2020-08-24T03:06:00Z</o:Created>
+  <o:LastSaved>2020-08-24T03:06:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>943</o:Words>
+  <o:Characters>5376</o:Characters>
+  <o:Company>IQUIFIB (UBA-CONICET)</o:Company>
+  <o:Lines>44</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>6307</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="ReadPlate3.0_files/themedata.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:"Lucida Grande";
+	panose-1:2 11 6 0 4 5 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520090897 1342218751 0 0 447 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-ascii-font-family:"Lucida Grande";
+	mso-hansi-font-family:"Lucida Grande";
+	mso-bidi-font-family:"Lucida Grande";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1038"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>ReadPlate</span></b></span><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'> <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Author: <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Jose Maria Delfino
+(delfino@qb.ffyb.uba.ar) <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Department of Biological
+Chemistry and Institute of Biochemistry and Biophysics (IQUIFIB) <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>School of Pharmacy &amp;
+Biochemistry, University of Buenos Aires and CONICET <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span style='font-size:10.0pt'>Junin</span></span><span
+style='font-size:10.0pt'> 956, C1113AAD Buenos Aires, Argentina <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Phone: 54 11 4962 5506,
+extension 116 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>History: </span></b><span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>August 15, 2020: <span
+class=SpellE>ReadPlate</span> 3.0 version incorporates the capability of
+reading multi-well plates <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>of</span></span><span
+style='font-size:10.0pt'> 6 (3x2), 12 (4x3), 24 (6x4), 48 (8x6) or 96 (12x8)
+wells. A new user-friendly interface <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>facilitates</span></span><span
+style='font-size:10.0pt'> image analysis. This version allows new user-defined
+features to optimize blank <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>correction</span></span><span
+style='font-size:10.0pt'>. Multiple readings of the same plate have also
+considerably been facilitated, appending <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>the</span></span><span
+style='font-size:10.0pt'> full parameter file to the results and log file <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>February 16, 2018:
+ReadPlate2.1 incorporates an improved blank correction algorithm <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>April 15, 2016: ReadPlate2
+introduces a correction for blank measurements <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>March 10, 2016: Inclusion of
+alpha numeric labeling for the wells and calculation <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>of</span></span><span
+style='font-size:10.0pt'> absorbance values <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>December 16, 2015: Original
+version <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>With thanks to Sandra <span
+class=SpellE>Verstraeten</span>, Pablo <span class=SpellE>Carabias</span>,
+Irene <span class=SpellE>Mangialavori</span> and Gabriela Gomez for <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>their</span></span><span
+style='font-size:10.0pt'> enthusiasm, suggestions and help with this project <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Key words: </span></b><span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Plate reader, <span
+class=SpellE>microplate</span> reader, <span class=SpellE>microtiter</span>
+plate photometry, absorbance, digital camera, <span class=GramE>cell</span>-phone
+camera <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Relevant literature reference: <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Carla R. <span class=SpellE>Angelani</span>,
+Pablo <span class=SpellE>Carabias</span>, Karen M. Cruz, Jose M. Delfino, <span
+class=SpellE>Marilina</span> de <span class=SpellE>Sautu</span>, <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Maria V. <span class=SpellE>Espelt</span>,
+<span class=SpellE>Mariela</span> S. Ferreira-Gomes, Gabriela E. Gomez, Irene
+C. <span class=SpellE>Mangialavori</span>, <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span style='font-size:10.0pt'>Malena</span></span><span
+style='font-size:10.0pt'> <span class=SpellE>Manzi</span>, Maria F. <span
+class=SpellE>Pignataro</span>, Nicolas A. <span class=SpellE>Saffioti</span>, <span
+class=SpellE>Damiana</span> M. <span class=SpellE>Salvatierra</span> <span
+class=SpellE>Frechou</span>, <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Javier Santos, Pablo J. <span
+class=SpellE>Schwarzbaum</span> <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>&quot;A Metabolic Control
+Analysis Approach to Introduce the Study of Systems in Biochemistry: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>the</span></span><span
+style='font-size:10.0pt'> Glycolytic Pathway in the Red Blood Cell&quot; <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Biochemistry and Molecular
+Biology Education, Volume 46, Issue5, September/October 2018, <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Pages 502-515 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><a
+href="https://doi.org/10.1002/bmb.21139">https://doi.org/10.1002/bmb.21139</a> <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Source: </span></b><span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>The source code of
+ReadPlate3.0 version is available at <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><a
+href="../../macros/ReadPlate3.0.txt">../../macros/ReadPlate3.0.txt</a>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Installation: </span></b><span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Download ReadPlate3.0.txt and
+do Plugins &gt; Install. The plugin is ready to be launched by <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>clicking</span></span><span
+style='font-size:10.0pt'> Plugins &gt;ReadPlate3.0 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>An example image of a 96-well
+plate is available at <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><a
+href="../../macros/images/plate.jpg">../../macros/images/plate.jpg</a>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Description: <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Image acquisition: </span></b><span style='font-size:
+10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>The multi-well plate is
+located on top of a home-built trans-illuminator: a white 7 x 10 LED array, <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>powered</span></span><span
+style='font-size:10.0pt'> by a 12V DC power supply, covered with an acrylic
+plate that acts as a light-diffusing <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>base</span></span><span
+style='font-size:10.0pt'> (<b style='mso-bidi-font-weight:normal'>Figure A</b>).
+To avoid the influence of stray light, the device is covered with a tall black <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>plywood</span></span><span
+style='font-size:10.0pt'> pyramidal box equipped with a central hole at the top
+(<b style='mso-bidi-font-weight:normal'>Figure B</b>), through which the <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>zoom</span></span><span
+style='font-size:10.0pt'> lens of the camera is located (Nikon <span
+class=SpellE>CoolPix</span> S6300 in our case, but cell-phone cameras can be <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>used</span></span><span
+style='font-size:10.0pt'> as well). The vertical optical axis passes through
+the center of the plate. To minimize parallax <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>error</span></span><span
+style='font-size:10.0pt'> that would affect the light path through the samples,
+pictures are taken at a minimal distance <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>of</span></span><span
+style='font-size:10.0pt'> 70 cm. The plate borders should be parallel to the
+frame of the picture. The example <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>photograph</span></span><span
+style='font-size:10.0pt'> (stored as a .jpg file) corresponds to a 96-well
+plate with samples of a colorimetric <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>assay</span></span><span
+style='font-size:10.0pt'> for lactate (120 <span class=SpellE>&#956;L</span>
+per well, maximum of absorbance at 555 nm). In this case, the green <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>channel</span></span><span
+style='font-size:10.0pt'> shows the highest sensitivity, due to maximal spectral
+overlap between the absorption <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>spectrum</span></span><span
+style='font-size:10.0pt'> of the <span class=SpellE>chromophore</span> in the
+sample and the green window. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>Plugin use: </span></b><span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Before starting (very
+important!), please set the following parameters for measurements: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>(Analyze &gt; Set
+Measurements). The following should be selected: Area / Standard Deviation / <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Min &amp; Max Gray Value/
+Mean Gray Value/ Modal Gray Value/ Add to Overlay / Redirect to None / <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Decimal Places (0-9): 3. <span
+class=SpellE>ReadPlate</span> measures the color intensity (RGB) of an image
+(.jpg file) of a <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>multi</span></span><span
+style='font-size:10.0pt'>-well plate of 6 (3x2), 12 (4x3), 24 (6x4), 48 (8x6)
+or 96 (12x8) wells. The color photograph <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>of</span></span><span
+style='font-size:10.0pt'> the plate should be centered at the middle point. For
+further details and validation against a <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>commercial</span></span><span
+style='font-size:10.0pt'> plate reader, see the Supplementary Material (Figure
+S3) of the literature reference <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>cited</span></span><span
+style='font-size:10.0pt'> above. Open the .jpg image from within the <span
+class=SpellE>ImageJ</span> software (tested with version 1.53c, <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Wayne <span class=SpellE>Rasband</span>,
+NIH, 26 June 2020). Run the plugin <span class=SpellE>ReadPlate</span> (by
+launching Plugins &gt; <span class=SpellE>ReadPlate</span>). <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Select the correct plate
+format: 6(3x2), 12(4x3), 24(6x4), 48(8x6) or 96(12x8) wells (<b
+style='mso-bidi-font-weight:normal'>Figure C</b>). <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Make a center-to-center
+rectangular selection of wells (upper-left and lower-right corners, <b
+style='mso-bidi-font-weight:normal'>Figure D</b>). <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Select the desired color
+channel (Red, Green, Blue or Gray) for measurements (<b style='mso-bidi-font-weight:
+normal'>Figure E</b>). Choose <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>the</span></span><span
+style='font-size:10.0pt'> appropriate parameters for the grid of circles to be
+measured (<b style='mso-bidi-font-weight:normal'>Figure F</b>). Each circle
+needs <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>not</span></span><span
+style='font-size:10.0pt'> be too large, because enough color information is
+coded in pixels covering a relatively small <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>area</span></span><span
+style='font-size:10.0pt'>. The final grid overlaid on the plate should show main
+circles centered on each well surrounded <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>by</span></span><span
+style='font-size:10.0pt'> ancillary circles located outside (<b
+style='mso-bidi-font-weight:normal'>Figure G</b>). The latter are used by the
+blank correction <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>algorithm</span></span><span
+style='font-size:10.0pt'> to compensate for any difference in local light
+intensity (<b style='mso-bidi-font-weight:normal'>Figure H</b>). Check the fit
+of the <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>final</span></span><span
+style='font-size:10.0pt'> grid onto the plate image. If satisfactory, the user
+proceeds to collect measurements. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>A table of results will
+appear next (<b style='mso-bidi-font-weight:normal'>Figure I</b>). This
+includes number, alphanumeric <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>label</span></span><span
+style='font-size:10.0pt'> and area of each well, light intensity measurements
+(Mean, <span class=SpellE>StdDev</span>, Mode, Min, Max), <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>and</span></span><span
+style='font-size:10.0pt'> absorbance values. Corrected absorbance values (<span
+class=SpellE>Acorr</span>) result from applying the blank <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>suppression</span></span><span
+style='font-size:10.0pt'> algorithm. Note that <i style='mso-bidi-font-style:
+normal'>all measurements are taken on a single image of the plate</i>, thus <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:10.0pt'>eliminating</span></span><span
+style='font-size:10.0pt'> the need for taking parallel measurements on an empty
+plate. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>By default, results are
+formatted as .<span class=SpellE>csv</span> files, readily interpretable by
+Excel (<b style='mso-bidi-font-weight:normal'>Figure J</b>). <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>A - The trans-illuminator <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75"
+ alt="Description: Macintosh HD:Users:jmdelfino:Desktop:jmd:projects:img_dev:ReadPlate2.1:text&amp;images:A.jpg"
+ style='width:395pt;height:296pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image001.jpg" o:title="A"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=397 height=298
+src="ReadPlate3.0_files/image002.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:jmd:projects:img_dev:ReadPlate2.1:text&amp;images:A.jpg"
+v:shapes="Picture_x0020_1"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>B - The black box and cameras <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_2"
+ o:spid="_x0000_i1026" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate_081520:ReadPlate3.0_files:Slide1.jpg"
+ style='width:395pt;height:296pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image003.jpg" o:title="Slide1.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=397 height=298
+src="ReadPlate3.0_files/image004.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate_081520:ReadPlate3.0_files:Slide1.jpg"
+v:shapes="Picture_x0020_2"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>C - Choosing the plate format <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_4"
+ o:spid="_x0000_i1027" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureC.png"
+ style='width:396pt;height:313pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image005.png" o:title="FigureC"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=398 height=315
+src="ReadPlate3.0_files/image006.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureC.png"
+v:shapes="Picture_x0020_4"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>D - Making the rectangular selection <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_5"
+ o:spid="_x0000_i1028" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureD.png"
+ style='width:395pt;height:311pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image007.png" o:title="FigureD"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=397 height=313
+src="ReadPlate3.0_files/image008.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureD.png"
+v:shapes="Picture_x0020_5"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>E - Selecting the color channel <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_6"
+ o:spid="_x0000_i1029" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureE.png"
+ style='width:396pt;height:312pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image009.png" o:title="FigureE"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=398 height=314
+src="ReadPlate3.0_files/image010.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureE.png"
+v:shapes="Picture_x0020_6"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>F - Setting the parameters <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_7"
+ o:spid="_x0000_i1030" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureF.png"
+ style='width:396pt;height:312pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image011.png" o:title="FigureF"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=398 height=314
+src="ReadPlate3.0_files/image012.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureF.png"
+v:shapes="Picture_x0020_7"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>G - Checking the fit of the grid <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_8"
+ o:spid="_x0000_i1031" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureG.png"
+ style='width:399pt;height:314pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image013.png" o:title="FigureG"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=401 height=316
+src="ReadPlate3.0_files/image014.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureG.png"
+v:shapes="Picture_x0020_8"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>H - The blank suppression procedure <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_9"
+ o:spid="_x0000_i1032" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureH.png"
+ style='width:395pt;height:296pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image015.png" o:title="FigureH"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=397 height=298
+src="ReadPlate3.0_files/image016.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureH.png"
+v:shapes="Picture_x0020_9"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>I - Getting results in tabular form <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_10"
+ o:spid="_x0000_i1033" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureI.png"
+ style='width:397pt;height:314pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image017.png" o:title="FigureI"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=399 height=316
+src="ReadPlate3.0_files/image018.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureI.png"
+v:shapes="Picture_x0020_10"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'>J - Exporting results in Excel format <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_11"
+ o:spid="_x0000_i1034" type="#_x0000_t75" alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureJ.png"
+ style='width:396pt;height:346pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ReadPlate3.0_files/image019.png" o:title="FigureJ"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=398 height=348
+src="ReadPlate3.0_files/image020.png"
+alt="Description: Macintosh HD:Users:jmdelfino:Desktop:ReadPlate3:ReadPlate3.0_files:FigureJ.png"
+v:shapes="Picture_x0020_11"><![endif]></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
