@@ -1,27 +1,46 @@
 {
   "name": "ReadPlate",
   "url": "https://ghanerka.github.io/ReadPlate/",
+  "generated": "2026-08-18T13:30:16Z",
   "payloads": [
     {
       "logical_path": "plugins/ReadPlate_3.0.ijm",
-      "remote_path": "plugins/ReadPlate_3.0.ijm-20260818125804",
+      "remote_path": "plugins/ReadPlate_3.0.ijm-20260818133016",
       "bytes": 18089,
       "sha256": "cebc7adec072ac5fae9bbf6a87d677bcfc59ca7e998ab1d7586ac034b45761d6",
-      "updater_checksum": "8fc5c209609bb0a2cd47089abe70813e19c26597"
+      "updater_checksum": "8fc5c209609bb0a2cd47089abe70813e19c26597",
+      "author": "José María Delfino",
+      "description": "ReadPlate 3.0 measures intensity and absorbance from photographs of 6-, 12-, 24-, 48-, and 96-well plates.",
+      "links": [
+        "https://github.com/ghanerka/ReadPlate",
+        "https://doi.org/10.1002/bmb.21139"
+      ]
     },
     {
       "logical_path": "plugins/ReadPlate/index.html",
-      "remote_path": "plugins/ReadPlate/index.html-20260818125804",
+      "remote_path": "plugins/ReadPlate/index.html-20260818133016",
       "bytes": 51085,
       "sha256": "dbe08e5276d083db63498ce89e51169f0ec36265586bd05bf083b61b72766807",
-      "updater_checksum": "89a1541aa5409e70b915682e813fa4ce81ab9fe7"
+      "updater_checksum": "89a1541aa5409e70b915682e813fa4ce81ab9fe7",
+      "author": "José María Delfino",
+      "description": "Original ReadPlate 3.0 documentation.",
+      "links": [
+        "https://github.com/ghanerka/ReadPlate",
+        "https://doi.org/10.1002/bmb.21139"
+      ]
     },
     {
       "logical_path": "plugins/ReadPlate/plate.jpg",
-      "remote_path": "plugins/ReadPlate/plate.jpg-20260818125804",
+      "remote_path": "plugins/ReadPlate/plate.jpg-20260818133016",
       "bytes": 492341,
       "sha256": "d32206e3543ed109d9b01b840a943c9388ea189b1704ff1624a4e3c1c0a1291c",
-      "updater_checksum": "e5ce43bd9a588bdd56b3adc4fdcdfbe768b09e88"
+      "updater_checksum": "e5ce43bd9a588bdd56b3adc4fdcdfbe768b09e88",
+      "author": "José María Delfino",
+      "description": "Original sample photograph of a 96-well plate.",
+      "links": [
+        "https://github.com/ghanerka/ReadPlate",
+        "https://doi.org/10.1002/bmb.21139"
+      ]
     }
   ]
 }
